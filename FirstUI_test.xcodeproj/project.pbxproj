@@ -10,7 +10,6 @@
 		743862B41FCE62CD00364667 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 743862B31FCE62CD00364667 /* main.m */; };
 		743862B71FCE62CD00364667 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 743862B61FCE62CD00364667 /* AppDelegate.m */; };
 		743862BA1FCE62CD00364667 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 743862B91FCE62CD00364667 /* ViewController.m */; };
-		743862BD1FCE62CD00364667 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 743862BB1FCE62CD00364667 /* Main.storyboard */; };
 		743862C01FCE62CD00364667 /* FirstUI_test.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 743862BE1FCE62CD00364667 /* FirstUI_test.xcdatamodeld */; };
 		743862C21FCE62CD00364667 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 743862C11FCE62CD00364667 /* Assets.xcassets */; };
 		743862C51FCE62CD00364667 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 743862C31FCE62CD00364667 /* LaunchScreen.storyboard */; };
@@ -20,6 +19,8 @@
 		74599F361FCFC76E00A50721 /* ToDoItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 74599F351FCFC76E00A50721 /* ToDoItem.m */; };
 		74599F381FCFE5E200A50721 /* SampleData.m in Sources */ = {isa = PBXBuildFile; fileRef = 74599F371FCFE5E200A50721 /* SampleData.m */; };
 		74599F3B1FD000F200A50721 /* ToDoListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74599F3A1FD000F200A50721 /* ToDoListTableViewController.m */; };
+		74599F3E1FD021DB00A50721 /* ToDoItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 74599F3D1FD021DB00A50721 /* ToDoItemCell.m */; };
+		74753DD01FD5236300D8F969 /* ToDoDetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74753DCF1FD5236300D8F969 /* ToDoDetailTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,7 +47,6 @@
 		743862B61FCE62CD00364667 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		743862B81FCE62CD00364667 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		743862B91FCE62CD00364667 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		743862BC1FCE62CD00364667 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		743862BF1FCE62CD00364667 /* FirstUI_test.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FirstUI_test.xcdatamodel; sourceTree = "<group>"; };
 		743862C11FCE62CD00364667 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		743862C41FCE62CD00364667 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -58,12 +58,16 @@
 		743862DA1FCE62CD00364667 /* FirstUI_testUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstUI_testUITests.m; sourceTree = "<group>"; };
 		743862DC1FCE62CD00364667 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		74599F041FCFB47200A50721 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = FirstUI_test/Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		74599F311FCFC00800A50721 /* ToDoListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToDoListTableViewController.h; sourceTree = "<group>"; };
-		74599F341FCFC75400A50721 /* ToDoItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToDoItem.h; sourceTree = "<group>"; };
-		74599F351FCFC76E00A50721 /* ToDoItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToDoItem.m; sourceTree = "<group>"; };
-		74599F371FCFE5E200A50721 /* SampleData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SampleData.m; sourceTree = "<group>"; };
-		74599F391FCFF0C000A50721 /* SampleData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SampleData.h; sourceTree = "<group>"; };
-		74599F3A1FD000F200A50721 /* ToDoListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToDoListTableViewController.m; sourceTree = "<group>"; };
+		74599F311FCFC00800A50721 /* ToDoListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ToDoListTableViewController.h; path = ../ToDoListTableViewController.h; sourceTree = "<group>"; };
+		74599F341FCFC75400A50721 /* ToDoItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ToDoItem.h; path = ../ToDoItem.h; sourceTree = "<group>"; };
+		74599F351FCFC76E00A50721 /* ToDoItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ToDoItem.m; path = ../ToDoItem.m; sourceTree = "<group>"; };
+		74599F371FCFE5E200A50721 /* SampleData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SampleData.m; path = ../SampleData.m; sourceTree = "<group>"; };
+		74599F391FCFF0C000A50721 /* SampleData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SampleData.h; path = ../SampleData.h; sourceTree = "<group>"; };
+		74599F3A1FD000F200A50721 /* ToDoListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ToDoListTableViewController.m; path = ../ToDoListTableViewController.m; sourceTree = "<group>"; };
+		74599F3C1FD021DB00A50721 /* ToDoItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToDoItemCell.h; sourceTree = SOURCE_ROOT; };
+		74599F3D1FD021DB00A50721 /* ToDoItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToDoItemCell.m; sourceTree = SOURCE_ROOT; };
+		74753DCE1FD5236300D8F969 /* ToDoDetailTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToDoDetailTableViewController.h; sourceTree = "<group>"; };
+		74753DCF1FD5236300D8F969 /* ToDoDetailTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToDoDetailTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,13 +98,6 @@
 		743862A61FCE62CD00364667 = {
 			isa = PBXGroup;
 			children = (
-				74599F391FCFF0C000A50721 /* SampleData.h */,
-				74599F371FCFE5E200A50721 /* SampleData.m */,
-				74599F341FCFC75400A50721 /* ToDoItem.h */,
-				74599F351FCFC76E00A50721 /* ToDoItem.m */,
-				74599F311FCFC00800A50721 /* ToDoListTableViewController.h */,
-				74599F3A1FD000F200A50721 /* ToDoListTableViewController.m */,
-				74599F031FCFB47200A50721 /* Main.storyboard */,
 				743862B11FCE62CD00364667 /* FirstUI_test */,
 				743862CE1FCE62CD00364667 /* FirstUI_testTests */,
 				743862D91FCE62CD00364667 /* FirstUI_testUITests */,
@@ -121,16 +118,26 @@
 		743862B11FCE62CD00364667 /* FirstUI_test */ = {
 			isa = PBXGroup;
 			children = (
+				74599F391FCFF0C000A50721 /* SampleData.h */,
+				74599F371FCFE5E200A50721 /* SampleData.m */,
+				74599F341FCFC75400A50721 /* ToDoItem.h */,
+				74599F351FCFC76E00A50721 /* ToDoItem.m */,
+				74599F311FCFC00800A50721 /* ToDoListTableViewController.h */,
+				74599F3A1FD000F200A50721 /* ToDoListTableViewController.m */,
+				74599F031FCFB47200A50721 /* Main.storyboard */,
 				743862B51FCE62CD00364667 /* AppDelegate.h */,
 				743862B61FCE62CD00364667 /* AppDelegate.m */,
 				743862B81FCE62CD00364667 /* ViewController.h */,
 				743862B91FCE62CD00364667 /* ViewController.m */,
-				743862BB1FCE62CD00364667 /* Main.storyboard */,
 				743862C11FCE62CD00364667 /* Assets.xcassets */,
 				743862C31FCE62CD00364667 /* LaunchScreen.storyboard */,
 				743862C61FCE62CD00364667 /* Info.plist */,
 				743862BE1FCE62CD00364667 /* FirstUI_test.xcdatamodeld */,
 				743862B21FCE62CD00364667 /* Supporting Files */,
+				74599F3C1FD021DB00A50721 /* ToDoItemCell.h */,
+				74599F3D1FD021DB00A50721 /* ToDoItemCell.m */,
+				74753DCE1FD5236300D8F969 /* ToDoDetailTableViewController.h */,
+				74753DCF1FD5236300D8F969 /* ToDoDetailTableViewController.m */,
 			);
 			path = FirstUI_test;
 			sourceTree = "<group>";
@@ -271,7 +278,6 @@
 			files = (
 				743862C51FCE62CD00364667 /* LaunchScreen.storyboard in Resources */,
 				743862C21FCE62CD00364667 /* Assets.xcassets in Resources */,
-				743862BD1FCE62CD00364667 /* Main.storyboard in Resources */,
 				74599F051FCFB47200A50721 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -303,7 +309,9 @@
 				743862B71FCE62CD00364667 /* AppDelegate.m in Sources */,
 				743862C01FCE62CD00364667 /* FirstUI_test.xcdatamodeld in Sources */,
 				743862B41FCE62CD00364667 /* main.m in Sources */,
+				74599F3E1FD021DB00A50721 /* ToDoItemCell.m in Sources */,
 				74599F381FCFE5E200A50721 /* SampleData.m in Sources */,
+				74753DD01FD5236300D8F969 /* ToDoDetailTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,14 +347,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		743862BB1FCE62CD00364667 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				743862BC1FCE62CD00364667 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		743862C31FCE62CD00364667 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -361,6 +361,7 @@
 				74599F041FCFB47200A50721 /* Base */,
 			);
 			name = Main.storyboard;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

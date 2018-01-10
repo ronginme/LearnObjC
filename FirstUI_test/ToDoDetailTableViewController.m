@@ -1,23 +1,38 @@
 //
-//  ToDoListTableViewController.m
+//  ToDoDetailTableViewController.m
 //  FirstUI_test
 //
-//  Created by mikhail on 30/11/2017.
+//  Created by mikhail on 04/12/2017.
 //  Copyright © 2017 mikhail. All rights reserved.
 //
 
-#import "ToDoListTableViewController.h"
+#import "ToDoDetailTableViewController.h"
 #import "SampleData.h"
 #import "ToDoItemCell.h"
 
-@interface ToDoListTableViewController ()
+@interface ToDoDetailTableViewController ()
 {
 @private
-    NSMutableArray<ToDoItem*>* toDoItems;
+NSMutableArray<ToDoItem*>* toDoItems;
 }
 @end
 
-@implementation ToDoListTableViewController
+@implementation ToDoDetailTableViewController
+
+-(IBAction)cancelEdit:(UIStoryboardSegue*)segue {
+    
+}
+
+-(IBAction)acceptEdit:(UIStoryboardSegue*)segue {
+    //ToDoItem *item = [[ToDoItem alloc]
+    //                  init: Title.text
+    //                  andDesc: [NSString stringWithFormat: @"%s%ld", "TestDescription", (long)toDoItems.count+1]];
+    //[toDoItems addObject: item];
+    //NSIndexPath *index = [NSIndexPath indexPathForRow:toDoItems.count-1 inSection:0];
+    //id objects[] = { index };
+    //[self.tableView insertRowsAtIndexPaths: [NSArray arrayWithObjects:objects count:1] withRowAnimation: UITableViewRowAnimationAutomatic];
+    //[self.tableView scrollToRowAtIndexPath: index atScrollPosition: UITableViewScrollPositionBottom animated: true];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -37,23 +52,27 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 1;
+    return 3;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    if([toDoItems count]==0) {
-        toDoItems = [SampleData getInstance].Data;
-    }
-
-    return toDoItems.count;
+    //if([toDoItems count]==0) {
+    //    toDoItems = [SampleData getInstance].Data;
+    //}
+    
+    //return toDoItems.count;
+    return 1;
 }
 
+/*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    ToDoItem *toDoItem = toDoItems[indexPath.row];
-    ToDoItemView *cell = [tableView dequeueReusableCellWithIdentifier:@"ToDoItem" forIndexPath:indexPath];
-    [cell SetToDoItem: toDoItem];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    
+    // Configure the cell...
+    
     return cell;
 }
+*/
 
 /*
 // Override to support conditional editing of the table view.

@@ -15,7 +15,7 @@
 @property NSString* Description;
 @property NSDate *Date;
 
--(id) init:(NSString*)title andDesc:(NSString*)desc;
+- (id) init:(NSString*)title andDesc:(NSString*)desc;
 @end
 
 #endif /* ToDoItem_h */

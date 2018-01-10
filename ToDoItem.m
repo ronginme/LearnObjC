@@ -15,8 +15,7 @@
 @synthesize Description;
 @synthesize Date;
 
--(id) init:(NSString*)title andDesc:(NSString*)desc
-{
+- (id) init:(NSString*)title andDesc:(NSString*)desc {
     Title = title;
     Description = desc;
     //Date = [NSDate init];

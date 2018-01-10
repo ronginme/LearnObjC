@@ -12,15 +12,30 @@
 
 @implementation SampleData : NSObject 
 
-+(NSArray<ToDoItem *>*) GenerateSampleData
-{
-    ToDoItem *tdItem1 = [[ToDoItem alloc] init:@"TestTitle1" andDesc:@"TestDescription1"];
-    ToDoItem *tdItem2 = [[ToDoItem alloc] init:@"TestTitle2" andDesc:@"TestDescription2"];
-    ToDoItem *tdItem3 = [[ToDoItem alloc] init:@"TestTitle3" andDesc:@"TestDescription3"];
+static SampleData* storedData = nil;
+
++ (instancetype) getInstance {
+    if(storedData==nil){
+        storedData = [self new];
+    }
+    return storedData;
+}
+
+- (NSMutableArray<ToDoItem *>*) GenerateSampleData {
     
-    id objects[] = { tdItem1, tdItem2, tdItem3 };
-    NSUInteger count = sizeof(objects) / sizeof(id);
-    return [NSArray arrayWithObjects:objects count:count];
+    NSMutableArray *array = [[NSMutableArray alloc] init];
+    for (NSInteger f=0; f<5; ++f) {
+        ToDoItem *tdItem = [[ToDoItem alloc] init:
+                            [NSString stringWithFormat: @"%s%ld", "TestTitle", (long)f+1]
+                            andDesc:[NSString stringWithFormat: @"%s%ld", "TestDescription", (long)f+1]];
+        [array addObject: tdItem];
+    }
+    return array;
+}
+
+- (id) init {
+    self.Data = [self GenerateSampleData];
+    return self;
 }
 
 @end

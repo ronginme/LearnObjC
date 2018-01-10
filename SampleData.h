@@ -10,7 +10,13 @@
 #define SampleData_h
 
 @interface SampleData : NSObject
-+(NSArray<ToDoItem *>*) GenerateSampleData;
+
+@property NSMutableArray<ToDoItem*>* Data;
+
+- (NSMutableArray<ToDoItem *>*) GenerateSampleData;
+- (id)init;
++ (instancetype) getInstance;
+
 @end
 
 #endif /* SampleData_h */

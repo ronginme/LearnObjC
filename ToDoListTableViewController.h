@@ -10,5 +10,4 @@
 #import "ToDoItem.h"
 
 @interface ToDoListTableViewController : UITableViewController
-
 @end
